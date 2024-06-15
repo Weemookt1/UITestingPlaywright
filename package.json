@@ -1,0 +1,13 @@
+{
+  "name": "UITestingPlaywright",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Weemookt1/UITestingPlaywright.git",
+  "author": "Weemookt1 <Vimukt.tiwari@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.44.1",
+    "@types/node": "^20.14.2"
+  },
+  "scripts": {}
+}
