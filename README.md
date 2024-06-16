@@ -11,10 +11,26 @@ Before running the tests, ensure you have the following installed:
   - Playwright (`@playwright/test`)
   
 ## Installation 
-1. Clone the repository:
+  Clone the repository:
 
    ```bash git clone https://github.com/your/repository.git cd e-commerce-playwright ```
 
-2. Install dependencies: 
-  ```bash yarn install ```
+## Install dependencies: ##
+  
+  yarn install
 
+## Run test on chrome: ##
+  
+  yarn playwright test --project=chromium
+
+## Run test on firefox: ##
+  
+  yarn playwright test --project=firefox
+
+## Test Execution Report ##
+
+yarn playwright show-report
+
+## Run test on chrome (Headed, by default is headless): ##
+
+yarn playwright test --project=chromium --headed
