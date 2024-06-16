@@ -4,6 +4,7 @@ import { LoginPage } from '../pages/login';
 import { ProductsPage } from '../pages/product';
 import { CartPage } from '../pages/cart';
 import { CheckoutPage } from '../pages/checkout';
+import { userName, password } from '../data/user.json'
 
 test('E-commerce Test Suite', async ({ page }) => {
   const loginPage = new LoginPage(page);
@@ -12,7 +13,7 @@ test('E-commerce Test Suite', async ({ page }) => {
   const checkoutPage = new CheckoutPage(page);
 
   await page.goto('https://www.saucedemo.com/');
-  await loginPage.login('standard_user', 'secret_sauce');
+  await loginPage.login(userName, password);
 
   // Assertion for successful login 
   const productsTitle = await page.textContent('.title');
