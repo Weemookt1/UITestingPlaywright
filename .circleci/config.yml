@@ -1,0 +1,13 @@
+jobs:
+  build_and_run_test: # this can be any name you choose
+    executor: node/default # use the default executor defined within the orb
+    steps:
+      - checkout
+      - node/install-packages:
+          pkg-manager: yarn
+      - run:
+          command: yarn playwright test --project=chromium
+          name: Run test on chrome
+      - persist_to_workspace:
+          root: .
+          paths: test_results
